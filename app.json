@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Blog",
-    "slug": "blog",
+    "name": "BlogPost",
+    "slug": "blog-post",
     "platforms": [
       "ios",
       "android",
