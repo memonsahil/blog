@@ -1,6 +1,12 @@
 import axios from "axios";
 
-//With ngrok, the baseURL changes every 8 hours.
+/*
+Launch a local json database from the blog-post-server project. ngrok is setup in
+the blog-post-server project and is used to redirect the baseURL to the database.
+Replace the ngrok forwareded URL with the current baseURL. Note that the ngrok 
+forwarded URL changes every 8 hours.
+*/
+
 export default axios.create({
-  baseURL: "http://1c766752d708.ngrok.io",
+  baseURL: "http://afc1c7c69ba5.ngrok.io",
 });
