@@ -1,6 +1,6 @@
 # BlogPost
 
-An app that allows users to create, edit, and delete blog posts, developed with [React Native](https://reactnative.dev/) using its [Context API](https://reactjs.org/docs/context.html).
+An app that allows users to perform create, read, update, and delete operations on their blog posts, developed with [React Native](https://reactnative.dev/) using its [Context API](https://reactjs.org/docs/context.html).
 
 ## Setup
 
