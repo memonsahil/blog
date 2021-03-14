@@ -4,18 +4,13 @@ import {
   View,
   Text,
   FlatList,
-  Button,
   TouchableOpacity,
-} from "react-native"; //TouchableOpacity turns any element touchable.
+} from "react-native";
 import { Context } from "../context/BlogContext";
 import { Feather } from "@expo/vector-icons";
-import ShowScreen from "./ShowScreen";
 
 const IndexScreen = ({ navigation }) => {
-  //Object destructured to get navigation from props.
-  //console.log(props);   To view the props object and its functions within.
-
-  const { state, deleteBlogPosts, getBlogPosts } = useContext(Context); //useContext is used to access the BlogContext.
+  const { state, deleteBlogPosts, getBlogPosts } = useContext(Context);
 
   useEffect(() => {
     getBlogPosts(); //Used for getting the blogposts from the server initially.
@@ -27,19 +22,17 @@ const IndexScreen = ({ navigation }) => {
 
     return () => {
       //Turning off the listener when the IndexScreen is dismounted.
-      listener.remove(); //This callback() will be invoked when the IndexScreen is removed.
+      listener.remove();
     };
   });
 
   return (
-    //onPress = {addBlogPosts} same as onPress = {() => addBlogPosts()}.
     <View>
       <FlatList
         data={state}
         keyExtractor={(blogPost) => blogPost.title}
         renderItem={({ item }) => {
           return (
-            //Passing the id for that particular item through navigation.
             <TouchableOpacity
               onPress={() => navigation.navigate("Show", { id: item.id })}
             >

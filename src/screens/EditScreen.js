@@ -11,11 +11,12 @@ const EditScreen = ({ navigation }) => {
   const blogPost = state.find((blogPost) => blogPost.id === id);
 
   return (
-    <BlogPostForm //Passing props to BlogPostForm.
+    <BlogPostForm
       initialValues={{ title: blogPost.title, content: blogPost.content }}
       onSubmit={(title, content) => {
+        //navigation.pop automatically sends the user to the previous screen when called.
         editBlogPosts(id, title, content, () => navigation.pop());
-      }} //navigation.pop automatically sends the user to the previous screen when called.
+      }}
     />
   );
 };
