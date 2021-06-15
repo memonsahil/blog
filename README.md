@@ -14,13 +14,15 @@ An app that allows users to perform CRUD operations on their blog posts. Built u
 $ cd blog-post && npm install
 ````
 
-2. Start the project using expo:
+2. Connect the app to its database by launching the [blog-post-server](https://github.com/memonsahil/blog-post-server) project and completing its setup. Upon completing this step, the app will connect to its database on launch.
+
+3. Start the project using expo:
 
 ````
 $ expo start
 ````
 
-3. Scan its QR code and run the app in [Expo Go](https://expo.io/client).
+4. Scan its QR code and run the app in [Expo Go](https://expo.io/client).
 
 ## Contributing
 
