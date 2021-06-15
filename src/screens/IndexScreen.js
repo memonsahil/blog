@@ -13,18 +13,16 @@ const IndexScreen = ({ navigation }) => {
   const { state, deleteBlogPosts, getBlogPosts } = useContext(Context);
 
   useEffect(() => {
-    getBlogPosts(); //Used for getting the blogposts from the server initially.
+    getBlogPosts(); // Get blogposts from the server initially.
 
     const listener = navigation.addListener("didFocus", () => {
-      //Get the blogposts everytime when the IndexScreen is in focus.
       getBlogPosts();
     });
 
     return () => {
-      //Turning off the listener when the IndexScreen is dismounted.
       listener.remove();
     };
-  });
+  }, []);
 
   return (
     <View>
@@ -52,7 +50,6 @@ const IndexScreen = ({ navigation }) => {
   );
 };
 
-//To add the create icon in the header.
 IndexScreen.navigationOptions = ({ navigation }) => {
   return {
     headerRight: () => (

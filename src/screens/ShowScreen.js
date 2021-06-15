@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { Context } from "../context/BlogContext";
 import { Feather } from "@expo/vector-icons";
 
@@ -18,7 +18,6 @@ const ShowScreen = ({ navigation }) => {
   );
 };
 
-//To add the edit icon in the header.
 ShowScreen.navigationOptions = ({ navigation }) => {
   return {
     headerRight: () => (
@@ -32,7 +31,5 @@ ShowScreen.navigationOptions = ({ navigation }) => {
     ),
   };
 };
-
-const styles = StyleSheet.create({});
 
 export default ShowScreen;
