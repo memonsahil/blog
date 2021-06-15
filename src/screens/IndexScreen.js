@@ -13,8 +13,6 @@ const IndexScreen = ({ navigation }) => {
   const { state, deleteBlogPosts, getBlogPosts } = useContext(Context);
 
   useEffect(() => {
-    getBlogPosts(); // Get blogposts from the server initially.
-
     const listener = navigation.addListener("didFocus", () => {
       getBlogPosts();
     });

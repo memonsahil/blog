@@ -14,7 +14,7 @@ const EditScreen = ({ navigation }) => {
       initialValues={{ title: blogPost.title, content: blogPost.content }}
       onSubmit={(title, content) => {
         // navigation.pop automatically sends the user to the previous screen.
-        editBlogPosts(id, title, content, () => navigation.pop());
+        editBlogPosts(blogPost.id, title, content, () => navigation.pop());
       }}
     />
   );
