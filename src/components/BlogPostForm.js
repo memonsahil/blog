@@ -29,7 +29,6 @@ const BlogPostForm = ({ onSubmit, initialValues }) => {
   );
 };
 
-//Used to give default values to props when no value is present.
 BlogPostForm.defaultProps = {
   initialValues: {
     title: "",
